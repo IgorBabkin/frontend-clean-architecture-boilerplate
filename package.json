@@ -4,8 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config webpack.config.js",
-    "commit": "git-cz",
+    "start": "parcel src/index.html",
     "lint": "eslint src/**/*.{ts,tsx}"
   },
   "devDependencies": {
@@ -15,24 +14,14 @@
     "@types/webpack-env": "^1.16.2",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
-    "css-loader": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-react": "^7.26.0",
-    "html-webpack-plugin": "^5.3.2",
-    "node-sass": "^6.0.1",
+    "parceljs": "^0.0.1",
     "prettier": "^2.4.1",
-    "sass-loader": "^12.1.0",
-    "source-map-loader": "^3.0.0",
-    "style-loader": "^3.3.0",
-    "ts-loader": "^9.2.6",
-    "typescript": "^4.4.3",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.53.0",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1",
-    "webpack-notifier": "^1.7.0"
+    "sass": "^1.42.1",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "bootstrap": "^5.1.1",
