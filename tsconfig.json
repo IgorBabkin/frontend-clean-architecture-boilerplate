@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["es2017", "dom"],
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "downlevelIteration": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

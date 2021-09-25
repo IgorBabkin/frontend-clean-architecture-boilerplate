@@ -1,0 +1,56 @@
+{
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/typescript",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "import"
+    ],
+    "rules": {
+        "import/no-restricted-paths": [
+            2,
+            {
+                "basePath": "./src/",
+                "zones": [
+                    {
+                        "target": "domain",
+                        "from": "{infrastructure,operations,presenters}"
+                    },
+                    {
+                        "target": "core",
+                        "from": "{presenters,di,operations,infrastructure,domain}"
+                    },
+                    {
+                        "target": "operations",
+                        "from": "presenters"
+                    }
+                ]
+            }
+        ],
+        "@typescript-eslint/no-empty-function": ["off"],
+        "@typescript-eslint/no-empty-interface": ["off"],
+        "@typescript-eslint/no-non-null-assertion": ["off"]
+    }
+}
