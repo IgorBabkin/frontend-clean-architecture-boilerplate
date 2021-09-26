@@ -1,17 +1,15 @@
-import { createMoqProviderStorage, createTestLocator } from '../testHelpers/createTestLocator';
 import { TodoStore } from './TodoStore';
 import { IServiceLocator } from 'ts-ioc-container';
-import { MoqProviderStorage } from '../testHelpers/MoqProviderStorage';
 import { ITodo } from './ITodo';
 import { firstValueFrom } from 'rxjs';
+import { UnitTestServiceLocator } from '../testHelpers/unitTestServiceLocator';
+import { createLooseMock } from '../testHelpers/createMock';
 
 describe('TodoStore', function() {
   let locator: IServiceLocator;
-  let mockedProviderStorage: MoqProviderStorage;
 
   beforeEach(() => {
-    mockedProviderStorage = createMoqProviderStorage();
-    locator = createTestLocator(mockedProviderStorage);
+    locator = new UnitTestServiceLocator(createLooseMock);
   });
 
   it('filters todos', async () => {
