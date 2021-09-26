@@ -20,13 +20,13 @@ export const Application: FunctionComponent = () => {
       <div className='container'>
         <Switch>
           <Route exact path='/' render={() => (
-            <Scope context='some context'>
+            <Scope context='Hello everyone'>
               <HomePage />
             </Scope>
           )}>
           </Route>
           <Route path='/about' render={() => (
-            <Scope>
+            <Scope context='about us smth'>
               <AboutPage />
             </Scope>
           )}>
