@@ -1,0 +1,32 @@
+/* eslint-disable */
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
+const ProgressPlugin = require('webpack').ProgressPlugin;
+const WebpackNotifierPlugin = require('webpack-notifier');
+const common = require('./webpack.common');
+
+module.exports = {
+  ...common,
+  ...{
+    mode: 'development',
+
+    devServer: {
+      hot: true,
+      port: 3330,
+      host: 'localhost',
+      historyApiFallback: false,
+    },
+
+    devtool: 'inline-source-map',
+
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './web/index.html.ejs',
+        inject: 'body',
+      }),
+      new HotModuleReplacementPlugin(),
+      new WebpackNotifierPlugin(),
+      new ProgressPlugin(),
+    ],
+  },
+};

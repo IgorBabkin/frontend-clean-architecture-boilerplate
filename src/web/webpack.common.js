@@ -1,33 +1,21 @@
 /* eslint-disable */
+const { BASE_PATH, BUILD_PATH, MODULE_PATH } = require('../../env');
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HotModuleReplacementPlugin = require('webpack').HotModuleReplacementPlugin;
-const ProgressPlugin = require('webpack').ProgressPlugin;
-const WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
-  mode: 'development',
-  context: path.resolve(__dirname, './src'),
+  context: BASE_PATH,
   entry: {
     app: './web/entry.tsx',
   },
+
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, './dist/assets'),
+    path: path.resolve(BUILD_PATH, './web/assets'),
   },
-
-  devServer: {
-    hot: true,
-    port: 3330,
-    host: 'localhost',
-    historyApiFallback: false,
-  },
-
-  devtool: 'inline-source-map',
 
   resolve: {
     extensions: ['.tsx', '.ts', '.json', '.js'],
-    modules: [path.resolve(__dirname, './src'), 'node_modules'],
+    modules: MODULE_PATH,
   },
 
   module: {
@@ -62,14 +50,4 @@ module.exports = {
       },
     ],
   },
-
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './web/index.html.ejs',
-      inject: 'body',
-    }),
-    new HotModuleReplacementPlugin(),
-    new WebpackNotifierPlugin(),
-    new ProgressPlugin(),
-  ],
 };
