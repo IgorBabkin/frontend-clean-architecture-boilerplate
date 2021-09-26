@@ -7,13 +7,13 @@ import {
   TodoStore,
 } from '../../application';
 import { IServiceLocator, ProviderBuilder } from 'ts-ioc-container';
-import { Logger } from '../../services/Logger';
-import { TodoRepository } from '../../persistence/TodoRepository';
+import { ConsoleLogger } from '../../service/ConsoleLogger';
+import { StubTodoRepository } from '../../persistence/StubTodoRepository';
 
 export function prodEnv(l: IServiceLocator): IServiceLocator {
   return l
-    .register(ILoggerKey, ProviderBuilder.fromConstructor(Logger).asScoped())
+    .register(ILoggerKey, ProviderBuilder.fromConstructor(ConsoleLogger).asScoped())
     .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).asSingleton())
-    .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(TodoRepository).asSingleton())
+    .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(StubTodoRepository).asSingleton())
     .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).asSingleton());
 }

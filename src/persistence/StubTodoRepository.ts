@@ -1,6 +1,6 @@
 import { ITodo, ITodoRepository } from '../application';
 
-export class TodoRepository implements ITodoRepository {
+export class StubTodoRepository implements ITodoRepository {
   fetchAll(): Promise<ITodo[]> {
     return Promise.resolve([
       {

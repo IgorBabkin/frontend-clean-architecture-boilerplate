@@ -1,6 +1,6 @@
 import { IDisposable, ILogger } from '../application';
 
-export class Logger implements ILogger, IDisposable {
+export class ConsoleLogger implements ILogger, IDisposable {
   constructor(private prefix: string) {}
 
   log(...args: unknown[]): void {
