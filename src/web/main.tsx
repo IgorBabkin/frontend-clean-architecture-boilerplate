@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import './main.scss';
+import './ui/main.scss';
 import { render } from 'react-dom';
 import React from 'react';
 import { Application } from './Application';

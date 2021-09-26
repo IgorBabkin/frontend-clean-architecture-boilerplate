@@ -11,6 +11,7 @@ import {
   repeat,
 } from '../../../application';
 import { useAction, useCommand, useQuery } from 'react-clean-reactive-architecture';
+import { Button } from 'web/ui';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);
@@ -22,9 +23,7 @@ export const TodoList: FunctionComponent = () => {
 
   return (
     <div>
-      <button
-        type="submit"
-        className="btn btn-primary mb-3"
+      <Button
         onClick={() =>
           addTodo.dispatch({
             id: getRandomString(10),
@@ -35,7 +34,7 @@ export const TodoList: FunctionComponent = () => {
         }
       >
         Add
-      </button>
+      </Button>
       <select
         defaultValue={$(filter$)!.minPriority}
         onChange={({ target }) => filterTodos.execute({ minPriority: parseInt(target.value) })}
