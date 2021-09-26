@@ -3639,10 +3639,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-reactive-architecture@^0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.20.tgz#7475566b6941daf66eeb93b79b656c26d693546f"
-  integrity sha512-b8WNvfslgn/a0LrRcBkEq4e1mXuzt+rH9i66P/xf4QBVo3J7c1R7QM7FEVeKsJcldHvlMRn/nHzsvT3OdmIV4g==
+react-clean-reactive-architecture@^0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.22.tgz#8e33fa96b417cb64a7af211b8fbf17bdbe609a24"
+  integrity sha512-LJ+sQbcymig/0n7jiDnFL34gYxZQvHCynLPKAacppumaWYPO8zCtrtiHS8A8CvBHU9/hS0DkQOEELDUf3IhUEg==
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -4551,10 +4551,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-ioc-container@^6.24.0:
-  version "6.25.0"
-  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-6.25.0.tgz#fdcb8ff6542a756399b79a8cb8f5ca4d53c6e82d"
-  integrity sha512-vuTHdQ1DN85S1dk2nKtL7WLCo9gsPwLYVBxc1fhNCEEoFGLX3v/Bx4uoTpeBXa18zRZ90MCJrZ1yeGtyy4rIig==
+ts-ioc-container@^6.27.0:
+  version "6.27.0"
+  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-6.27.0.tgz#c54560d83c62414c1b639dc568f7d2d2dcff8425"
+  integrity sha512-/g+5ur9k/8XR6YFNtGnFQF1YBTNTYR/dgyNnif1FVZ61yMHjhuHaftGZ6lhzO3X/bsQY2LrpGLIuiY62GCKKRQ==
 
 ts-loader@^9.2.6:
   version "9.2.6"
