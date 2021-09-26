@@ -3639,10 +3639,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-reactive-architecture@^0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.19.tgz#6f4753aa44c3021cdebe7daf7f4510c14519114d"
-  integrity sha512-yhKQ2ygSdIq1sKR1zOGvfFmJv334f73omFYkCvvx2KpgJWWRorwe06qquXk9taximwYxkfCPlDm5c3otyL2tUA==
+react-clean-reactive-architecture@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.20.tgz#7475566b6941daf66eeb93b79b656c26d693546f"
+  integrity sha512-b8WNvfslgn/a0LrRcBkEq4e1mXuzt+rH9i66P/xf4QBVo3J7c1R7QM7FEVeKsJcldHvlMRn/nHzsvT3OdmIV4g==
 
 react-dom@^17.0.2:
   version "17.0.2"
