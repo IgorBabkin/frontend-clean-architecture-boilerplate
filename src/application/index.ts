@@ -5,12 +5,17 @@ export { createLocatorBuilder } from './locator';
  */
 
 export { ILoggerKey, ILogger } from './domain/ILogger';
+export { ITodoRepositoryKey, ITodoRepository } from './domain/ITodoRepository';
+export { ITodo } from './domain/ITodo';
+export { TodoStore } from './domain/TodoStore';
+export { ITodoStore, ITodoStoreKey } from './domain/ITodoStore';
 
 /**
  * core
  */
 
 export { repeat } from './core/fp';
+export { IDisposable } from './core/IDisposable';
 export { getRandomString } from './core/random';
 
 /**

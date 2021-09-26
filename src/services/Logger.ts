@@ -1,5 +1,4 @@
-import { ILogger } from '../application/domain/ILogger';
-import { IDisposable } from '../application/core/IDisposable';
+import { IDisposable, ILogger } from '../application';
 
 export class Logger implements ILogger, IDisposable {
   constructor(private prefix: string) {}

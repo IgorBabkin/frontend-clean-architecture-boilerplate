@@ -7,7 +7,7 @@ export const AboutPage: FunctionComponent = () => {
   const logger = useDependency<ILogger>(ILoggerKey);
   const context = useDependency<IScopeContext<string>>(IScopeContextKey);
   useEffect(() => {
-    console.log(context.getValue());
+    logger.log(context.getValue());
   });
   return (
     <div>
