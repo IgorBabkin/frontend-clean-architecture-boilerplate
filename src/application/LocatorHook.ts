@@ -1,5 +1,5 @@
 import { IInstanceHook } from 'ts-ioc-container';
-import { onConstructMethodsMetadataCollector, onDisposeMethodsMetadataCollector } from '../metadata';
+import { onConstructMethodsMetadataCollector, onDisposeMethodsMetadataCollector } from './metadata';
 import { isDisposable, isInitializable } from 'clean-reactive-architecture';
 
 export class LocatorHook implements IInstanceHook {
