@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { useDependency } from 'react-clean-reactive-architecture';
-import { ILogger, ILoggerKey } from '../../../application';
+import { ILogger, ILoggerKey } from '../../../../application';
 import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
 
 export const AboutPage: FunctionComponent = () => {
