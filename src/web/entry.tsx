@@ -5,9 +5,9 @@ import React from 'react';
 import { Application } from './Application';
 import { LocatorContext } from 'react-clean-reactive-architecture';
 import { LocatorAdapter } from './core/LocatorAdapter';
-import { createLocator } from './locator';
+import { createLocator, EnvType } from './locator';
 
-const locator = createLocator();
+const locator = createLocator(process.env.NODE_ENV as EnvType);
 
 render(
   <LocatorContext.Provider value={new LocatorAdapter(locator)}>

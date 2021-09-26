@@ -36,15 +36,15 @@
                 "zones": [
                     {
                         "target": "application",
-                        "from": "{persistence,services,web}"
+                        "from": "{infrastructure,web}"
                     },
                     {
                         "target": "application/domain",
-                        "from": "application/{operations,testing}"
+                        "from": "application/operations"
                     },
                     {
-                        "target": "application/core",
-                        "from": "application/{testing,operations,domain}"
+                        "target": "core",
+                        "from": "{__tests__,application,infrastructure,web}"
                     }
                 ]
             }

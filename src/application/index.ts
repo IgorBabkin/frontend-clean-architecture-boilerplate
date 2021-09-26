@@ -14,9 +14,9 @@ export { ITodoStore, ITodoStoreKey } from './domain/ITodoStore';
  * core
  */
 
-export { repeat } from './core/fp';
-export { IDisposable } from './core/IDisposable';
-export { getRandomString } from './core/random';
+export { repeat } from '../core/fp';
+export { IDisposable } from '../core/IDisposable';
+export { getRandomString } from '../core/random';
 
 /**
  * operations
