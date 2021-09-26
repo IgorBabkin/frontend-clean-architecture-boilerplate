@@ -907,10 +907,10 @@ clean-css@^4.2.3:
   dependencies:
     source-map "~0.6.0"
 
-clean-reactive-architecture@^0.1.5:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/clean-reactive-architecture/-/clean-reactive-architecture-0.1.6.tgz#8db7e0c38365396fa43ef201f34346ff37475b47"
-  integrity sha512-oad5/uRgxKAlEs+D9VIkixTxFHpCizBCXYfZSs9dTV256Dz4bac6iB1zkMsbxm3n9zbEnR9SniUxEHnM28jaxg==
+clean-reactive-architecture@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/clean-reactive-architecture/-/clean-reactive-architecture-0.1.9.tgz#ec1c8ab9f734fccece2bb9c246d27a0d1641af87"
+  integrity sha512-vwkvLsz5+AlCXpP1j2jS8eaGllXFBVhZqjHNXdNrRjI/yoAJTrQz7bgxwNiC6aah9KbxK5JVi+7OgGvdnN+yGQ==
 
 clean-stack@^2.0.0:
   version "2.2.0"
@@ -3639,10 +3639,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-reactive-architecture@^0.0.18:
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.18.tgz#e31bfd6aaa1be4e29b6bb4993931e4ae24c7baa9"
-  integrity sha512-LIvLURv7czxo85pfif2PwQIE+xWtqbHkXotSO/xzvc1GWKhPy0slreBBJW/ARzXFvxkP6SISxd6Kp3Wr9AKEcA==
+react-clean-reactive-architecture@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/react-clean-reactive-architecture/-/react-clean-reactive-architecture-0.0.19.tgz#6f4753aa44c3021cdebe7daf7f4510c14519114d"
+  integrity sha512-yhKQ2ygSdIq1sKR1zOGvfFmJv334f73omFYkCvvx2KpgJWWRorwe06qquXk9taximwYxkfCPlDm5c3otyL2tUA==
 
 react-dom@^17.0.2:
   version "17.0.2"

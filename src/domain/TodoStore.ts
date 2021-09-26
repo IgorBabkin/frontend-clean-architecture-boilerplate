@@ -47,7 +47,7 @@ export class TodoStore implements ITodoStore {
   }
 
   setTodos(todos: ITodo[]): void {
-    this.all$.setValue(todos);
+    this.all$.update(() => todos);
   }
 
   setFilter(params: Partial<IFilterParams>): void {

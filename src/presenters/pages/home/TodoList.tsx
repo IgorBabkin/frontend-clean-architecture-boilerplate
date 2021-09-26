@@ -1,7 +1,6 @@
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Each, useObservables } from 'reactivex-react';
 import { GetTodoList } from '../../../operations/todo/GetTodoList';
-import { LoadTodoList } from '../../../operations/todo/LoadTodoList';
 import { IAddTodo, IAddTodoActionKey } from '../../../operations/todo/AddTodo';
 import { DeleteTodo } from '../../../operations/todo/DeleteTodo';
 import { repeat } from '../../../core/fp';
@@ -19,17 +18,12 @@ function getRandomString(length: number): string {
 }
 
 export const TodoList: FunctionComponent = () => {
-  const loadTodoList = useCommand(LoadTodoList);
   const filterTodos = useCommand(FilterTodoList);
   const filter$ = useQuery(GetTodoFilters, (q) => q.create());
   const todoList$ = useQuery(GetTodoList, (m) => m.create());
   const addTodo = useAction<IAddTodo>(IAddTodoActionKey);
   const deleteTodo = useCommand(DeleteTodo);
   const $ = useObservables();
-
-  useEffect(() => {
-    loadTodoList.execute();
-  }, []);
 
   return (
     <div>
