@@ -5,11 +5,11 @@ import React from 'react';
 import { Application } from './Application';
 import { LocatorContext } from 'react-clean-reactive-architecture';
 import { LocatorAdapter } from './core/LocatorAdapter';
-import { devEnv } from '../di/env/devEnv';
+import { devEnv } from './env/devEnv';
 import { IocLocatorBuilder, IServiceLocator } from 'ts-ioc-container';
-import { injectMetadataCollector } from '../di/metadata';
-import { LocatorHook } from '../di/LocatorHook';
-import { prodEnv } from '../di/env/prodEnv';
+import { injectMetadataCollector } from '../application/metadata';
+import { LocatorHook } from '../application/LocatorHook';
+import { prodEnv } from './env/prodEnv';
 
 let locator: IServiceLocator = new IocLocatorBuilder(injectMetadataCollector)
   .withInjectorHook(new LocatorHook())

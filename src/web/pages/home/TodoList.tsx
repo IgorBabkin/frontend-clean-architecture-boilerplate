@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import { Each, useObservables } from 'reactivex-react';
-import { GetTodoList } from '../../../operations/todo/GetTodoList';
-import { IAddTodo, IAddTodoActionKey } from '../../../operations/todo/AddTodo';
-import { DeleteTodo } from '../../../operations/todo/DeleteTodo';
-import { repeat } from '../../../core/fp';
-import { GetTodoFilters } from '../../../operations/todo/GetTodoFilters';
-import { FilterTodoList } from '../../../operations/todo/FilterTodoList';
+import { GetTodoList } from '../../../application/operations/todo/GetTodoList';
+import { IAddTodo, IAddTodoActionKey } from '../../../application/operations/todo/AddTodo';
+import { DeleteTodo } from '../../../application/operations/todo/DeleteTodo';
+import { repeat } from '../../../application/core/fp';
+import { GetTodoFilters } from '../../../application/operations/todo/GetTodoFilters';
+import { FilterTodoList } from '../../../application/operations/todo/FilterTodoList';
 import { useAction, useCommand, useQuery } from 'react-clean-reactive-architecture';
-import { getRandomString } from '../../../core/utils';
+import { getRandomString } from '../../../application/core/utils';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);

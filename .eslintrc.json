@@ -35,16 +35,16 @@
                 "basePath": "./src/",
                 "zones": [
                     {
-                        "target": "domain",
-                        "from": "{infrastructure,operations,presenters}"
+                        "target": "application",
+                        "from": "{persistence,services,web}"
                     },
                     {
-                        "target": "core",
-                        "from": "{presenters,di,operations,infrastructure,domain}"
+                        "target": "application/domain",
+                        "from": "application/{operations,testing}"
                     },
                     {
-                        "target": "operations",
-                        "from": "presenters"
+                        "target": "application/core",
+                        "from": "application/{testing,operations,domain}"
                     }
                 ]
             }

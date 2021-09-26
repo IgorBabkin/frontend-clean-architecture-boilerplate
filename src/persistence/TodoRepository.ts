@@ -1,5 +1,5 @@
-import { ITodo } from '../domain/ITodo';
-import { ITodoRepository } from '../domain/ITodoRepository';
+import { ITodo } from '../application/domain/ITodo';
+import { ITodoRepository } from '../application/domain/ITodoRepository';
 
 export class TodoRepository implements ITodoRepository {
   fetchAll(): Promise<ITodo[]> {

@@ -1,4 +1,4 @@
-import { inject } from '../../di/decorators';
+import { inject } from '../../decorators';
 import { ITodoStore, ITodoStoreKey } from '../../domain/ITodoStore';
 import { ITodo } from '../../domain/ITodo';
 import { IAction, Action } from 'clean-reactive-architecture';

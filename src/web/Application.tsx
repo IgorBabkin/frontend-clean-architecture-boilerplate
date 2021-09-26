@@ -1,10 +1,10 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { Scope, useCommand, useSaga } from 'react-clean-reactive-architecture';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-import { TodoNotificationSaga } from '../operations/todo/TodoNotificationSaga';
+import { TodoNotificationSaga } from '../application/operations/todo/TodoNotificationSaga';
 import { HomePage } from './pages/home/HomePage';
 import { AboutPage } from './pages/about/AboutPage';
-import { LoadTodoList } from '../operations/todo/LoadTodoList';
+import { LoadTodoList } from '../application/operations/todo/LoadTodoList';
 
 export const Application: FunctionComponent = () => {
   console.log('render application');

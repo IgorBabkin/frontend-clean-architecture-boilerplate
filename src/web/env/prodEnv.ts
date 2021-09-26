@@ -1,11 +1,11 @@
-import { ILoggerKey } from '../../domain/ILogger';
+import { ILoggerKey } from '../../application/domain/ILogger';
 import { IServiceLocator, ProviderBuilder } from 'ts-ioc-container';
-import { Logger } from '../../infrastructure/Logger';
-import { AddTodo, IAddTodoActionKey } from '../../operations/todo/AddTodo';
-import { ITodoRepositoryKey } from '../../domain/ITodoRepository';
-import { TodoRepository } from '../../infrastructure/TodoRepository';
-import { ITodoStoreKey } from '../../domain/ITodoStore';
-import { TodoStore } from '../../domain/TodoStore';
+import { Logger } from '../../services/Logger';
+import { AddTodo, IAddTodoActionKey } from '../../application/operations/todo/AddTodo';
+import { ITodoRepositoryKey } from '../../application/domain/ITodoRepository';
+import { TodoRepository } from '../../persistence/TodoRepository';
+import { ITodoStoreKey } from '../../application/domain/ITodoStore';
+import { TodoStore } from '../../application/domain/TodoStore';
 
 export function prodEnv(l: IServiceLocator): IServiceLocator {
   return l.register(ILoggerKey, ProviderBuilder.fromConstructor(Logger).asScoped())
