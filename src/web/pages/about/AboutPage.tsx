@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { useDependency } from 'react-clean-reactive-architecture';
-import { ILogger, ILoggerKey } from '../../../application/domain/ILogger';
+import { ILogger, ILoggerKey } from '../../../application';
 import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
 
 export const AboutPage: FunctionComponent = () => {
@@ -8,10 +8,10 @@ export const AboutPage: FunctionComponent = () => {
   const context = useDependency<IScopeContext<string>>(IScopeContextKey);
   useEffect(() => {
     console.log(context.getValue());
-  })
+  });
   return (
     <div>
-      <a href='#'>Home</a>
+      <a href="#">Home</a>
       sssdff
     </div>
   );

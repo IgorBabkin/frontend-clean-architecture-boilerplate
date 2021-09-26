@@ -51,6 +51,6 @@
     "reactivex-react": "^4.1.8",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.3.0",
-    "ts-ioc-container": "^6.27.0"
+    "ts-ioc-container": "^6.28.0"
   }
 }

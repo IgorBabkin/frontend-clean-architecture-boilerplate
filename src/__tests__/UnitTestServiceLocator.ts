@@ -1,6 +1,5 @@
-import { InjectionToken, IocLocatorBuilder, IProvider, IServiceLocator, ProviderKey } from 'ts-ioc-container';
-import { injectMetadataCollector } from '../application/metadata';
-import { LocatorHook } from '../application/LocatorHook';
+import { InjectionToken, IProvider, IServiceLocator, ProviderKey } from 'ts-ioc-container';
+import { createLocatorBuilder } from '../application';
 import { IMock } from 'moq.ts';
 import { MoqProviderStorage } from './MoqProviderStorage';
 
@@ -10,10 +9,7 @@ export class UnitTestServiceLocator implements IServiceLocator {
 
   constructor(createMock: <T>() => IMock<T>) {
     this.mockedStorage = new MoqProviderStorage(createMock);
-    this.locator = new IocLocatorBuilder(injectMetadataCollector)
-      .withInjectorHook(new LocatorHook())
-      .withMockedRepository(this.mockedStorage)
-      .build();
+    this.locator = createLocatorBuilder().withMockedRepository(this.mockedStorage).build();
   }
 
   findMock<T>(key: ProviderKey): IMock<T> {

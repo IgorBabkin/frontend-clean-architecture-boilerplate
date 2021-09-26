@@ -6150,10 +6150,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-ioc-container@^6.27.0:
-  version "6.27.0"
-  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-6.27.0.tgz#c54560d83c62414c1b639dc568f7d2d2dcff8425"
-  integrity sha512-/g+5ur9k/8XR6YFNtGnFQF1YBTNTYR/dgyNnif1FVZ61yMHjhuHaftGZ6lhzO3X/bsQY2LrpGLIuiY62GCKKRQ==
+ts-ioc-container@^6.28.0:
+  version "6.28.0"
+  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-6.28.0.tgz#dc7ef7ae20386c18fc5f6afa46eab4cf507e05d2"
+  integrity sha512-Z/dK0J0abnjMWBetyBcWxeNiOKxg/GqIZYRZOZ9nugqoEmFVfpn78MbXjfzLEVyrOLNJEzD3WCcRQT7aJ60llQ==
 
 ts-jest@^27.0.5:
   version "27.0.5"

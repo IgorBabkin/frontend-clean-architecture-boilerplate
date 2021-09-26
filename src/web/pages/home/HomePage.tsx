@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { TodoList } from './TodoList';
 import { useDependency } from 'react-clean-reactive-architecture';
-import { ILogger, ILoggerKey } from '../../../application/domain/ILogger';
+import { ILogger, ILoggerKey } from '../../../application';
 import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
 
 export const HomePage: FunctionComponent = () => {
@@ -9,10 +9,10 @@ export const HomePage: FunctionComponent = () => {
   const context = useDependency<IScopeContext<string>>(IScopeContextKey);
   useEffect(() => {
     logger.log(context.getValue());
-  })
+  });
   return (
     <div>
-      <a href='#about'>About</a>
+      <a href="#about">About</a>
       <TodoList />
     </div>
   );
