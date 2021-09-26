@@ -1,14 +1,15 @@
 import 'reflect-metadata';
+import './main.scss';
 import { render } from 'react-dom';
 import React from 'react';
-import { Application } from './presenters/Application';
+import { Application } from './Application';
 import { LocatorContext } from 'react-clean-reactive-architecture';
-import { LocatorAdapter } from './presenters/core/LocatorAdapter';
-import { devEnv } from './di/env/devEnv';
+import { LocatorAdapter } from './core/LocatorAdapter';
+import { devEnv } from '../di/env/devEnv';
 import { IocLocatorBuilder, IServiceLocator } from 'ts-ioc-container';
-import { injectMetadataCollector } from './di/metadata';
-import { LocatorHook } from './di/LocatorHook';
-import { prodEnv } from './di/env/prodEnv';
+import { injectMetadataCollector } from '../di/metadata';
+import { LocatorHook } from '../di/LocatorHook';
+import { prodEnv } from '../di/env/prodEnv';
 
 let locator: IServiceLocator = new IocLocatorBuilder(injectMetadataCollector)
   .withInjectorHook(new LocatorHook())

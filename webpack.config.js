@@ -9,8 +9,7 @@ module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, './src'),
   entry: {
-    app: './main.tsx',
-    style: './main.scss',
+    app: './web/main.tsx',
   },
   output: {
     filename: '[name].[hash].js',
@@ -66,7 +65,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html.ejs',
+      template: './web/index.html.ejs',
       inject: 'body',
     }),
     new HotModuleReplacementPlugin(),
