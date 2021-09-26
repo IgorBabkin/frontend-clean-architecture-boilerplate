@@ -31,7 +31,7 @@ const hook: IInstanceHook = {
 export function createLocator(): IServiceLocator {
   const locator = new IocLocatorBuilder(injectMetadataCollector).withInjectorHook(hook).build();
   return locator
-    .register(ILoggerKey, ProviderBuilder.fromConstructor(Logger).asRequested())
+    .register(ILoggerKey, ProviderBuilder.fromConstructor(Logger).asScoped())
     .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).asSingleton())
     .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(TodoRepository).asSingleton())
     .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).asSingleton());
