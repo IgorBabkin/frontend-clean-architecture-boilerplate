@@ -7,15 +7,7 @@ import { repeat } from '../../../core/fp';
 import { GetTodoFilters } from '../../../operations/todo/GetTodoFilters';
 import { FilterTodoList } from '../../../operations/todo/FilterTodoList';
 import { useAction, useCommand, useQuery } from 'react-clean-reactive-architecture';
-
-function getRandomString(length: number): string {
-  const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let result = '';
-  for (let i = 0; i < length; i++) {
-    result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
-  }
-  return result;
-}
+import { getRandomString } from '../../../core/utils';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);

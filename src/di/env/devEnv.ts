@@ -7,11 +7,9 @@ import { TodoRepository } from '../../infrastructure/TodoRepository';
 import { ITodoStoreKey } from '../../domain/ITodoStore';
 import { TodoStore } from '../../domain/TodoStore';
 
-export type RegisterProviders = (l: IServiceLocator) => IServiceLocator;
-
-export const devEnv: RegisterProviders = (l) => {
+export function devEnv(l: IServiceLocator): IServiceLocator {
   return l.register(ILoggerKey, ProviderBuilder.fromConstructor(Logger).asScoped())
     .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).asSingleton())
     .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(TodoRepository).asSingleton())
     .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).asSingleton());
-};
+}
