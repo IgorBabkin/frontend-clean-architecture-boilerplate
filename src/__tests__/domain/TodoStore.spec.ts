@@ -1,9 +1,9 @@
-import { TodoStore } from './TodoStore';
+import { TodoStore } from '../../application/domain/TodoStore';
 import { IServiceLocator } from 'ts-ioc-container';
-import { ITodo } from './ITodo';
+import { ITodo } from '../../application/domain/ITodo';
 import { firstValueFrom } from 'rxjs';
-import { UnitTestServiceLocator } from '../testing/UnitTestServiceLocator';
-import { createLooseMock } from '../testing/createMock';
+import { UnitTestServiceLocator } from '../helpers/UnitTestServiceLocator';
+import { createLooseMock } from '../helpers/createMock';
 
 describe('TodoStore', function() {
   let locator: IServiceLocator;

@@ -1,6 +1,6 @@
 import { InjectionToken, IocLocatorBuilder, IProvider, IServiceLocator, ProviderKey } from 'ts-ioc-container';
-import { injectMetadataCollector } from '../metadata';
-import { LocatorHook } from '../LocatorHook';
+import { injectMetadataCollector } from '../../application/metadata';
+import { LocatorHook } from '../../application/LocatorHook';
 import { IMock } from 'moq.ts';
 import { MoqProviderStorage } from './MoqProviderStorage';
 
