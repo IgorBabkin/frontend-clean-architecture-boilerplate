@@ -9,8 +9,6 @@ const mode = 'development';
 module.exports = {
   ...common(mode),
   ...{
-    mode,
-
     devServer: {
       hot: true,
       port: 3330,

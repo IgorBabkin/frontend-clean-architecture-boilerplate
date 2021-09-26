@@ -10,11 +10,6 @@ const mode = 'production';
 module.exports = {
   ...common(mode),
   ...{
-    entry: {
-      vendor: './web/ui/main.scss',
-      app: './web/entry.tsx',
-    },
-
     optimization: {
       splitChunks: {
         chunks: 'all',

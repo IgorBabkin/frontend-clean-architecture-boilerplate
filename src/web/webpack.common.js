@@ -6,8 +6,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = (mode) => ({
   mode,
   context: BASE_PATH,
+
   entry: {
-    app: './web/entry.tsx',
+    app: ['./web/entry.tsx'],
+    vendor: ['./web/ui/main.scss'],
   },
 
   output: {
