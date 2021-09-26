@@ -5,10 +5,11 @@ const ProgressPlugin = require('webpack').ProgressPlugin;
 const WebpackNotifierPlugin = require('webpack-notifier');
 const common = require('./webpack.common');
 
+const mode = 'development';
 module.exports = {
-  ...common,
+  ...common(mode),
   ...{
-    mode: 'development',
+    mode,
 
     devServer: {
       hot: true,
@@ -23,6 +24,7 @@ module.exports = {
       new HtmlWebpackPlugin({
         template: './web/index.html.ejs',
         inject: 'body',
+        environment: mode,
       }),
       new HotModuleReplacementPlugin(),
       new WebpackNotifierPlugin(),

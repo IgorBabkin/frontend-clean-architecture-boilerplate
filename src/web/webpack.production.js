@@ -4,11 +4,16 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const ProgressPlugin = require('webpack').ProgressPlugin;
 const common = require('./webpack.common');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const mode = 'production';
 module.exports = {
-  ...common,
+  ...common(mode),
   ...{
-    mode: 'production',
+    entry: {
+      vendor: './web/ui/main.scss',
+      app: './web/entry.tsx',
+    },
 
     optimization: {
       splitChunks: {
@@ -19,8 +24,12 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         template: './web/index.html.ejs',
-        filename: '../index.html.ejs',
+        filename: '../index.html',
         inject: 'body',
+        environment: mode,
+      }),
+      new MiniCssExtractPlugin({
+        filename: '[name].[hash].css',
       }),
       new CleanWebpackPlugin(),
       new BundleAnalyzerPlugin({

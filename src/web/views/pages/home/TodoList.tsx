@@ -11,7 +11,7 @@ import {
   repeat,
 } from '../../../../application';
 import { useAction, useCommand, useQuery } from 'react-clean-reactive-architecture';
-import { Button } from 'web/ui';
+import { Button, Panel } from 'web/ui';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);
@@ -22,7 +22,7 @@ export const TodoList: FunctionComponent = () => {
   const $ = useObservables();
 
   return (
-    <div>
+    <Panel>
       <Button
         onClick={() =>
           addTodo.dispatch({
@@ -67,6 +67,6 @@ export const TodoList: FunctionComponent = () => {
           )}
         </Each>
       </ul>
-    </div>
+    </Panel>
   );
 };

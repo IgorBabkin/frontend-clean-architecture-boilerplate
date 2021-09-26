@@ -1,8 +1,10 @@
 /* eslint-disable */
 const { BASE_PATH, BUILD_PATH, MODULE_PATH } = require('../../env');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = {
+module.exports = (mode) => ({
+  mode,
   context: BASE_PATH,
   entry: {
     app: './web/entry.tsx',
@@ -27,17 +29,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-          {
-            loader: 'sass-loader',
-          },
-        ],
+        use: [mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|png|svg)$/,
@@ -50,4 +42,8 @@ module.exports = {
       },
     ],
   },
-};
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
+});
