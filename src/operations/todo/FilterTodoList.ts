@@ -1,5 +1,5 @@
 import { ICommand } from 'clean-reactive-architecture';
-import { inject } from '../../di/decorators';
+import { inject } from '../../decorators';
 import { IFilterParams, ITodoStore, ITodoStoreKey } from '../../domain/ITodoStore';
 import { ITodoRepository, ITodoRepositoryKey } from '../../domain/ITodoRepository';
 

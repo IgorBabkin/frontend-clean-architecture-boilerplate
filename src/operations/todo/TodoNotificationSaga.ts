@@ -1,5 +1,5 @@
 import { Saga } from 'clean-reactive-architecture';
-import { inject } from '../../di/decorators';
+import { inject } from '../../decorators';
 import { IAddTodo, IAddTodoActionKey } from './AddTodo';
 import { Subscription } from 'rxjs';
 

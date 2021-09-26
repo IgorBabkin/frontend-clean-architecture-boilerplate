@@ -7,7 +7,7 @@ import { LocatorContext } from 'react-clean-reactive-architecture';
 import { LocatorAdapter } from './core/LocatorAdapter';
 import { devEnv } from '../di/env/devEnv';
 import { IocLocatorBuilder, IServiceLocator } from 'ts-ioc-container';
-import { injectMetadataCollector } from '../di/metadata';
+import { injectMetadataCollector } from '../metadata';
 import { LocatorHook } from '../di/LocatorHook';
 import { prodEnv } from '../di/env/prodEnv';
 
