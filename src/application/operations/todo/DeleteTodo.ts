@@ -1,7 +1,7 @@
 import { ICommand } from 'clean-reactive-architecture';
 import { inject } from '../../decorators';
-import { ITodoStore, ITodoStoreKey } from '../../domain/ITodoStore';
-import { ITodoRepository, ITodoRepositoryKey } from '../../domain/ITodoRepository';
+import { ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
+import { ITodoRepository, ITodoRepositoryKey } from '../../domain/todo/ITodoRepository';
 
 export class DeleteTodo implements ICommand {
   constructor(

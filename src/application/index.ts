@@ -5,10 +5,10 @@ export { createLocatorBuilder } from './locator';
  */
 
 export { ILoggerKey, ILogger } from './domain/ILogger';
-export { ITodoRepositoryKey, ITodoRepository } from './domain/ITodoRepository';
-export { ITodo } from './domain/ITodo';
-export { TodoStore } from './domain/TodoStore';
-export { ITodoStore, ITodoStoreKey } from './domain/ITodoStore';
+export { ITodoRepositoryKey, ITodoRepository } from './domain/todo/ITodoRepository';
+export { ITodo } from './domain/todo/ITodo';
+export { TodoStore } from './domain/todo/TodoStore';
+export { ITodoStore, ITodoStoreKey } from './domain/todo/ITodoStore';
 
 /**
  * core

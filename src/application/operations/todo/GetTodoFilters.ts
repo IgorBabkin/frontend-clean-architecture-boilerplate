@@ -1,5 +1,5 @@
 import { IQuery } from 'clean-reactive-architecture';
-import { IFilterParams, ITodoStore, ITodoStoreKey } from '../../domain/ITodoStore';
+import { IFilterParams, ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
 import { inject } from '../../decorators';
 import { Observable } from 'rxjs';
 

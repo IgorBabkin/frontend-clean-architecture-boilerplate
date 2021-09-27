@@ -1,8 +1,8 @@
 import { inject } from '../../decorators';
-import { ITodoStore, ITodoStoreKey } from '../../domain/ITodoStore';
-import { ITodo } from '../../domain/ITodo';
+import { ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
+import { ITodo } from '../../domain/todo/ITodo';
 import { IAction, Action } from 'clean-reactive-architecture';
-import { ITodoRepository, ITodoRepositoryKey } from '../../domain/ITodoRepository';
+import { ITodoRepository, ITodoRepositoryKey } from '../../domain/todo/ITodoRepository';
 
 export const IAddTodoActionKey = Symbol.for('IAddTodoAction');
 export interface IAddTodo extends IAction<ITodo> {}
