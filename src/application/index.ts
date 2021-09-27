@@ -21,10 +21,10 @@ export { getRandomString } from '../core/random';
 /**
  * operations
  */
-export { AddTodo, IAddTodoActionKey, IAddTodo } from './operations/todo/AddTodo';
-export { DeleteTodo } from './operations/todo/DeleteTodo';
-export { FilterTodoList } from './operations/todo/FilterTodoList';
-export { GetTodoList } from './operations/todo/GetTodoList';
-export { GetTodoFilters } from './operations/todo/GetTodoFilters';
-export { TodoNotificationSaga } from './operations/todo/TodoNotificationSaga';
-export { LoadTodoList } from './operations/todo/LoadTodoList';
+export { AddTodo, IAddTodoActionKey, IAddTodo } from './useCases/todo/AddTodo';
+export { DeleteTodo } from './useCases/todo/DeleteTodo';
+export { FilterTodoList } from './useCases/todo/FilterTodoList';
+export { GetTodoList } from './useCases/todo/GetTodoList';
+export { GetTodoFilters } from './useCases/todo/GetTodoFilters';
+export { TodoNotificationSaga } from './useCases/todo/TodoNotificationSaga';
+export { LoadTodoList } from './useCases/todo/LoadTodoList';
