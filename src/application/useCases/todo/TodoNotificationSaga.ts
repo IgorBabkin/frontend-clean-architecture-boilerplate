@@ -1,4 +1,4 @@
-import { Saga } from 'clean-reactive-architecture';
+import { Saga } from 'clean-use-case';
 import { inject } from '../../decorators';
 import { IAddTodo, IAddTodoActionKey } from './AddTodo';
 import { Subscription } from 'rxjs';
@@ -9,6 +9,6 @@ export class TodoNotificationSaga extends Saga {
   }
 
   protected onInit(subscriptions: Subscription[]): void {
-    subscriptions.push(this.addTodoAction.getPayload().subscribe(() => console.log('Added new todo')));
+    subscriptions.push(this.addTodoAction.getAfter$().subscribe(() => console.log('Added new todo')));
   }
 }

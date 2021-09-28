@@ -1,4 +1,4 @@
-import { IQuery } from 'clean-reactive-architecture';
+import { IQuery } from 'clean-use-case';
 import { IFilterParams, ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
 import { inject } from '../../decorators';
 import { Observable } from 'rxjs';

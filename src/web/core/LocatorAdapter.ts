@@ -1,9 +1,8 @@
-import { InjectionToken, Locator } from 'react-clean-reactive-architecture';
+import { InjectionToken, Locator } from 'react-clean-use-case';
 import { IScopeContextKey, IServiceLocator, ProviderBuilder, ScopeContext } from 'ts-ioc-container';
 
 export class LocatorAdapter implements Locator {
-  constructor(private locator: IServiceLocator) {
-  }
+  constructor(private locator: IServiceLocator) {}
 
   createScope<T>(context?: T): Locator {
     const scope = this.locator.createLocator();

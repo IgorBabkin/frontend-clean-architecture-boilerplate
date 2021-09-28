@@ -4,7 +4,7 @@ import {
   onConstructMethodsMetadataCollector,
   onDisposeMethodsMetadataCollector,
 } from './metadata';
-import { isDisposable, isInitializable } from 'clean-reactive-architecture';
+import { isDisposable, isInitializable } from 'clean-use-case';
 
 export function createLocatorBuilder(): ILocatorBuilder {
   return new IocLocatorBuilder(injectMetadataCollector).withInjectorHook({

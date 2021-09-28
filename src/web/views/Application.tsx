@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect } from 'react';
-import { Scope, useCommand, useSaga } from 'react-clean-reactive-architecture';
+import { Scope, useCommand, useSaga } from 'react-clean-use-case';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LoadTodoList, TodoNotificationSaga } from '../../application';
 import { HomePage } from './pages/home/HomePage';

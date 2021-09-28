@@ -1,6 +1,6 @@
 import { inject } from '../../decorators';
 import { ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
-import { ICommand } from 'clean-reactive-architecture';
+import { ICommand } from 'clean-use-case';
 import { ITodoRepository, ITodoRepositoryKey } from '../../domain/todo/ITodoRepository';
 
 export class LoadTodoList implements ICommand {

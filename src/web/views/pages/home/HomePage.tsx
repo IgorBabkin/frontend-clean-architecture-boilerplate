@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { TodoList } from './TodoList';
-import { useDependency } from 'react-clean-reactive-architecture';
+import { useDependency } from 'react-clean-use-case';
 import { ILogger, ILoggerKey } from '../../../../application';
 import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
 

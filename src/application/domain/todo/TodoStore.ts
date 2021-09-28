@@ -1,7 +1,7 @@
 import { combineLatest, map, Observable } from 'rxjs';
 import { ITodo } from './ITodo';
 import { IFilterParams, ITodoStore } from './ITodoStore';
-import { ReactiveObject } from 'clean-reactive-architecture';
+import { ObservableStore } from 'reactivex-store';
 
 export interface IFilterPriorityParams {
   minPriority: number;
@@ -25,8 +25,8 @@ function filterList(list: ITodo[], filter: IFilterParams): ITodo[] {
 }
 
 export class TodoStore implements ITodoStore {
-  private all$ = new ReactiveObject<ITodo[]>([]);
-  private filterParams$ = new ReactiveObject<IFilterParams>({ minPriority: 0, maxPriority: 5 });
+  private all$ = new ObservableStore<ITodo[]>([]);
+  private filterParams$ = new ObservableStore<IFilterParams>({ minPriority: 0, maxPriority: 5 });
 
   getItems(): Observable<ITodo[]> {
     return combineLatest([this.all$.toObservable(), this.filterParams$.toObservable()]).pipe(
@@ -39,19 +39,19 @@ export class TodoStore implements ITodoStore {
   }
 
   addTodo(todo: ITodo): void {
-    this.all$.update((items) => items.concat([todo]));
+    this.all$.map((items) => items.concat([todo]));
   }
 
   deleteTodo(id: string): void {
-    this.all$.update((items) => items.filter((item) => item.id !== id));
+    this.all$.map((items) => items.filter((item) => item.id !== id));
   }
 
   setTodos(todos: ITodo[]): void {
-    this.all$.update(() => todos);
+    this.all$.map(() => todos);
   }
 
   setFilter(params: Partial<IFilterParams>): void {
-    this.filterParams$.update((state) => ({
+    this.filterParams$.map((state) => ({
       ...state,
       ...params,
     }));
