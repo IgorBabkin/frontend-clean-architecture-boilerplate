@@ -30,3 +30,4 @@
 # Reactivity
 
 - [rxjs](https://rxjs.dev/)
+- [reactivex-store](https://github.com/IgorBabkin/ts-ioc-container/tree/master/packages/reactivex-store)
