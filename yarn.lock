@@ -1663,10 +1663,10 @@ clean-stack@^2.0.0:
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
   integrity sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==
 
-clean-use-case@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/clean-use-case/-/clean-use-case-2.0.3.tgz#9f6cd6be29c618797ca97413538820a016de8563"
-  integrity sha512-i+RhWM/TTmeXLV8PeKr9SVZQobjPGfmdwQI7WOrAuPc2H4fFcyCrw+AUDgh1FIIMq4F1sRHmhY3+0e40v2cDIg==
+clean-use-case@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/clean-use-case/-/clean-use-case-2.0.7.tgz#cf2e28b500ccfa492066b8b43c497ea45729d1e8"
+  integrity sha512-LpRro9prAiqzYu2uuZgMrEw3RasOnsOq2KHGhV5T9+2HyITsU3QBYw4Ij3Je/XRWrTrfYu2nzBa+v4DNSrh9bQ==
 
 clean-webpack-plugin@^4.0.0:
   version "4.0.0"
@@ -5334,10 +5334,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-use-case@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.0.2.tgz#4fb6b6f3346066524b2569d2fd1482216b541b0e"
-  integrity sha512-aVYmdDPu+2A6gZQtCvaFEQZtZmS5Z9h/4PkQk0gfAKAsUXuJMQSHxwOfdrqBTtFLZdbDQibAjiV0jmRbSAY/Jw==
+react-clean-use-case@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.0.11.tgz#958c18756ee67a4ab167138ea39783c48e39ed2d"
+  integrity sha512-tUXt78tlLTAAUjTU8nkwv6bH0V/ZWR8iDAvQ6jIbaBut2L+0/IdGd4owIks/+/q06hYWZwMo4e0SZI1WSHUTEw==
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -5387,6 +5387,11 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
+react-ts-ioc-container@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.0.3.tgz#453d8d48fccda788e654a0656582a8595ffcfc4b"
+  integrity sha512-WxTvIsrlHDBAtjnRnQMYBnA0msMIbw2eNJP5nJCiVkYnkFSxppQmNJdh2SBn1URiw62lzCx7vDrip/lbNLDOaw==
+
 react@^17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
@@ -5395,15 +5400,15 @@ react@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-reactivex-react@^4.1.10:
-  version "4.1.10"
-  resolved "https://registry.yarnpkg.com/reactivex-react/-/reactivex-react-4.1.10.tgz#4ee4f162c1f00ee306a94d5980f1ca89560eabc0"
-  integrity sha512-Vd+B61dwpySjkQuFyA5tPoEs5m8Bw53rREZIq5OTSxs3tQL5t8JSHc4nu6cDOIKElf4WyzzmvT5G7215r5tu4A==
+reactivex-react@^4.1.12:
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/reactivex-react/-/reactivex-react-4.1.12.tgz#594a006b9727984d2bd915b3d82ba2cc0a24abf3"
+  integrity sha512-AwROjFj42XBr/v1ENweyT4a/rlSqSCc3sKVG6rxhK9TDiVlXxVjCVlqOYh3pmJs8s8itOIjzvf5eHKIp95GlAA==
 
-reactivex-store@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/reactivex-store/-/reactivex-store-1.0.1.tgz#1db1df65c5f68fa31c0954ab0427573df916c3bc"
-  integrity sha512-RmppHjSf2zUBqVh758qVLv/iB0EX8L5OVSdm5Jk3oZlFu29lKloklrQc7hTYjz3zw1BdFud0G+6ipi/Npys/FA==
+reactivex-store@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/reactivex-store/-/reactivex-store-1.0.6.tgz#f706c002dba500d939c1dd810adf7f2a61db943a"
+  integrity sha512-QLNKe3jqirrvBhzwwU4h6IJkpAQVkaM64p4xeCJm8bYgEQ5hiqCZm5o1WWZlGXOQy0mLRWK+/mjSP3OIcx3gFw==
 
 read-pkg-up@^3.0.0:
   version "3.0.0"

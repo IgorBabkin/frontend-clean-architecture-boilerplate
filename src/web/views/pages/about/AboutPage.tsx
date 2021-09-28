@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect } from 'react';
-import { useDependency } from 'react-clean-use-case';
 import { ILogger, ILoggerKey } from '../../../../application';
 import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
+import { useDependency } from 'react-ts-ioc-container';
 
 export const AboutPage: FunctionComponent = () => {
   const logger = useDependency<ILogger>(ILoggerKey);

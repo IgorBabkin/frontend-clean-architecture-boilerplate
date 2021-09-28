@@ -1,4 +1,4 @@
-import { InjectionToken, Locator } from 'react-clean-use-case';
+import { InjectionToken, Locator } from 'react-ts-ioc-container';
 import { IScopeContextKey, IServiceLocator, ProviderBuilder, ScopeContext } from 'ts-ioc-container';
 
 export class LocatorAdapter implements Locator {
