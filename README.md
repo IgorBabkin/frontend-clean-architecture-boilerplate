@@ -25,7 +25,7 @@
 
 # UseCases
 
-- [CleanUseCase](https://github.com/IgorBabkin/clean-reactive-architecture)
+- [CleanUseCase](https://github.com/IgorBabkin/ts-ioc-container/tree/master/packages/clean-use-case)
 
 # Reactivity
 
