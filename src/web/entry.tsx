@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { render } from 'react-dom';
 import React from 'react';
 import { Application } from './views/Application';
-import { LocatorAdapter } from './core/LocatorAdapter';
+import { LocatorAdapter } from './core/react-ts-ioc-container/LocatorAdapter';
 import { createLocator, EnvType } from './locator';
 import { LocatorContext } from 'react-ts-ioc-container';
 

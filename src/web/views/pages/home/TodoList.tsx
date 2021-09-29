@@ -10,8 +10,8 @@ import {
   IAddTodoActionKey,
   repeat,
 } from '../../../../application';
-import { useAction, useCommand, useQuery } from 'react-clean-use-case';
 import { Button, Panel } from 'web/ui';
+import { useAction, useCommand, useQuery } from '../../../core/react-clean-use-case/useCases';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);

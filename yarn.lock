@@ -5334,10 +5334,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-use-case@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.0.11.tgz#958c18756ee67a4ab167138ea39783c48e39ed2d"
-  integrity sha512-tUXt78tlLTAAUjTU8nkwv6bH0V/ZWR8iDAvQ6jIbaBut2L+0/IdGd4owIks/+/q06hYWZwMo4e0SZI1WSHUTEw==
+react-clean-use-case@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.0.14.tgz#13a9c26da70eaa53e3bfa8eacb10e6bd8a2fc471"
+  integrity sha512-j8l0SSNkXBwQluQ1lEkwFQ/L7PJbdBkPwqz0YzlbGGnQJClXJzvG2NWOHBq9KbH+uwd9szuT623r1v6V4A3TZw==
 
 react-dom@^17.0.2:
   version "17.0.2"
