@@ -10,8 +10,9 @@ import {
   IAddTodoActionKey,
   repeat,
 } from '../../../../application';
-import { Button, Panel } from '../../../ui';
+import { Panel } from '../../../ui';
 import { useAction, useCommand, useQuery } from '../../../core/react-clean-use-case/useCases';
+import { MDBBtn, MDBCol, MDBListGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);
@@ -22,51 +23,71 @@ export const TodoList: FunctionComponent = () => {
   const $ = useObservables();
 
   return (
-    <Panel>
-      <Button
-        onClick={() =>
-          addTodo.dispatch({
-            id: getRandomString(10),
-            title: 'Hey',
-            message: 'Hou',
-            priority: Math.round((Math.random() * 10) % 5),
-          })
-        }
-      >
-        Add
-      </Button>
-      <select
-        defaultValue={$(filter$)!.minPriority}
-        onChange={({ target }) => filterTodos.execute({ minPriority: parseInt(target.value) })}
-      >
-        {repeat(6).map((i) => (
-          <option key={i} value={i}>
-            {i}
-          </option>
-        ))}
-      </select>
-      <select
-        defaultValue={$(filter$)!.maxPriority}
-        onChange={({ target }) => filterTodos.execute({ maxPriority: parseInt(target.value) })}
-      >
-        {repeat(6).map((i) => (
-          <option key={i} value={i}>
-            {i}
-          </option>
-        ))}
-      </select>
-      <ul>
+    <div>
+      <MDBRow className="mb-3">
+        <MDBCol>
+          <MDBBtn
+            onClick={() =>
+              addTodo.dispatch({
+                id: getRandomString(10),
+                title: 'Hey',
+                message: 'Hou',
+                priority: Math.round((Math.random() * 10) % 5),
+              })
+            }
+          >
+            Add
+          </MDBBtn>
+        </MDBCol>
+        <MDBCol size="auto">
+          <label htmlFor="min-priority" className="mx-2">
+            Min Priority
+          </label>
+          <select
+            id="min-priority"
+            defaultValue={$(filter$)!.minPriority}
+            onChange={({ target }) => filterTodos.execute({ minPriority: parseInt(target.value) })}
+          >
+            {repeat(6).map((i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+          <label htmlFor="max-priority" className="mx-2">
+            Max Priority
+          </label>
+          <select
+            id="max-priority"
+            defaultValue={$(filter$)!.maxPriority}
+            onChange={({ target }) => filterTodos.execute({ maxPriority: parseInt(target.value) })}
+          >
+            {repeat(6).map((i) => (
+              <option key={i} value={i}>
+                {i}
+              </option>
+            ))}
+          </select>
+        </MDBCol>
+      </MDBRow>
+      <MDBListGroup>
         <Each obs$={todoList$}>
           {({ id, title, message, priority }) => (
-            <li key={id}>
-              {title} - {message} - {priority}
-              <button className="btn btn-danger" onClick={() => deleteTodo.execute(id)}>
-                Delete
-              </button>
-            </li>
+            <MDBListGroupItem key={id}>
+              <MDBRow className="align-items-center">
+                <MDBCol>
+                  {title} - {message} - {priority}
+                </MDBCol>
+                <MDBCol size="auto">
+                  <MDBBtn className="btn btn-danger" onClick={() => deleteTodo.execute(id)}>
+                    Delete
+                  </MDBBtn>
+                </MDBCol>
+              </MDBRow>
+            </MDBListGroupItem>
           )}
         </Each>
-      </ul>
-    </Panel>
+      </MDBListGroup>
+    </div>
   );
 };

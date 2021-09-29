@@ -1,5 +1,5 @@
 /* eslint-disable */
-const { MODULE_PATH, BUILD_PATH } = require('../env');
+const { BUILD_PATH } = require('../env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
@@ -19,7 +19,6 @@ module.exports = (mode) => ({
 
   resolve: {
     extensions: ['.tsx', '.ts', '.json', '.js'],
-    modules: MODULE_PATH,
   },
 
   module: {

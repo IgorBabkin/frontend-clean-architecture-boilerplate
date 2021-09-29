@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import React from 'react';
 import { Application } from './views/Application';
 import { LocatorAdapter } from './core/react-ts-ioc-container/LocatorAdapter';
@@ -8,9 +8,9 @@ import { LocatorContext } from 'react-ts-ioc-container';
 
 const locator = createLocator(process.env.NODE_ENV as EnvType);
 
-render(
+ReactDOM.render(
   <LocatorContext.Provider value={new LocatorAdapter(locator)}>
     <Application />
   </LocatorContext.Provider>,
-  document.getElementById('root'),
+  document.getElementsByTagName('main')[0],
 );

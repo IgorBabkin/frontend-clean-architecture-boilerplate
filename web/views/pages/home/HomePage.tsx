@@ -12,7 +12,9 @@ export const HomePage: FunctionComponent = () => {
   });
   return (
     <div>
-      <a href="#about">About</a>
+      <div className="mb-4">
+        <a href="#about">About</a>
+      </div>
       <TodoList />
     </div>
   );

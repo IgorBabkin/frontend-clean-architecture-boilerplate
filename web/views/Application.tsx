@@ -17,24 +17,22 @@ export const Application: FunctionComponent = () => {
 
   return (
     <Router hashType="noslash">
-      <div className="container">
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <Scope context="Hello everyone">
-                <HomePage />
-              </Scope>
-            )}
-          />
-          <Route path="/about">
-            <Scope context="about us smth">
-              <AboutPage />
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={() => (
+            <Scope context="Hello everyone">
+              <HomePage />
             </Scope>
-          </Route>
-        </Switch>
-      </div>
+          )}
+        />
+        <Route path="/about">
+          <Scope context="about us smth">
+            <AboutPage />
+          </Scope>
+        </Route>
+      </Switch>
     </Router>
   );
 };
