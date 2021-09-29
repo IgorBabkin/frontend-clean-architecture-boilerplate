@@ -32,7 +32,6 @@
         "import/no-restricted-paths": [
             2,
             {
-                "basePath": "./src/",
                 "zones": [
                     {
                         "target": "application",
@@ -40,11 +39,11 @@
                     },
                     {
                         "target": "application/domain",
-                        "from": "application/operations"
+                        "from": "application/useCases"
                     },
                     {
                         "target": "core",
-                        "from": "{__tests__,application,infrastructure,web}"
+                        "from": "{application,infrastructure,web}"
                     }
                 ]
             }

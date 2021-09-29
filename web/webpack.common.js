@@ -1,15 +1,15 @@
 /* eslint-disable */
-const { BASE_PATH, BUILD_PATH, MODULE_PATH } = require('../../env');
-const path = require('path');
+const { MODULE_PATH, BUILD_PATH } = require('../env');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
 
 module.exports = (mode) => ({
   mode,
-  context: BASE_PATH,
+  context: path.resolve(__dirname, '../web'),
 
   entry: {
-    app: ['./web/entry.tsx'],
-    vendor: ['./web/ui/main.scss'],
+    app: ['./entry.tsx'],
+    vendor: ['./ui/main.scss'],
   },
 
   output: {

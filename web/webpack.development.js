@@ -20,7 +20,7 @@ module.exports = {
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: './web/index.html.ejs',
+        template: './index.html.ejs',
         inject: 'body',
         environment: mode,
       }),

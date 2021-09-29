@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "web:start": "webpack serve --config src/web/webpack.development.js",
-    "web:build": "webpack --config src/web/webpack.production.js",
+    "web:start": "webpack serve --config web/webpack.development.js",
+    "web:build": "webpack --config web/webpack.production.js",
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest"
   },

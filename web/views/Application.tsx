@@ -4,7 +4,7 @@ import { LoadTodoList, TodoNotificationSaga } from '../../application';
 import { HomePage } from './pages/home/HomePage';
 import { AboutPage } from './pages/about/AboutPage';
 import { Scope } from 'react-ts-ioc-container';
-import { useCommand, useSaga } from 'web/core/react-clean-use-case/useCases';
+import { useCommand, useSaga } from '../core/react-clean-use-case/useCases';
 
 export const Application: FunctionComponent = () => {
   console.log('render application');

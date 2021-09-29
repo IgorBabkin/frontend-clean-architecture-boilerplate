@@ -10,7 +10,7 @@ import {
   IAddTodoActionKey,
   repeat,
 } from '../../../../application';
-import { Button, Panel } from 'web/ui';
+import { Button, Panel } from '../../../ui';
 import { useAction, useCommand, useQuery } from '../../../core/react-clean-use-case/useCases';
 
 export const TodoList: FunctionComponent = () => {
