@@ -9,6 +9,6 @@ export class TodoNotificationSaga extends Saga {
   }
 
   protected onInit(subscriptions: Subscription[]): void {
-    subscriptions.push(this.addTodoAction.getAfter$().subscribe(() => console.log('Added new todo')));
+    subscriptions.push(this.addTodoAction.done$.subscribe(() => console.log('Added new todo')));
   }
 }
