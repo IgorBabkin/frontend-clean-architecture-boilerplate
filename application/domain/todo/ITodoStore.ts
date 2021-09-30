@@ -1,10 +1,14 @@
 import { Observable } from 'rxjs';
 import { ITodo } from './ITodo';
-import { IFilterPriorityParams } from './TodoStore';
 
 export const ITodoStoreKey = Symbol.for('ITodoStore');
 
-export type IFilterParams = IFilterPriorityParams;
+export type IFilterParams = {
+  minPriority: number;
+  maxPriority: number;
+  search: string;
+  caseSensitive: boolean;
+};
 
 export interface ITodoStore {
   getFilterParams(): Observable<IFilterParams>;

@@ -8,11 +8,10 @@ import {
   GetTodoList,
   IAddTodo,
   IAddTodoActionKey,
-  repeat,
 } from '../../../../application';
-import { Panel } from '../../../ui';
 import { useAction, useCommand, useQuery } from '../../../core/react-clean-use-case/useCases';
 import { MDBBtn, MDBCol, MDBListGroup, MDBListGroupItem, MDBRow } from 'mdb-react-ui-kit';
+import { Filter } from './Filter';
 
 export const TodoList: FunctionComponent = () => {
   const filterTodos = useCommand(FilterTodoList);
@@ -40,34 +39,7 @@ export const TodoList: FunctionComponent = () => {
           </MDBBtn>
         </MDBCol>
         <MDBCol size="auto">
-          <label htmlFor="min-priority" className="mx-2">
-            Min Priority
-          </label>
-          <select
-            id="min-priority"
-            defaultValue={$(filter$)!.minPriority}
-            onChange={({ target }) => filterTodos.execute({ minPriority: parseInt(target.value) })}
-          >
-            {repeat(6).map((i) => (
-              <option key={i} value={i}>
-                {i}
-              </option>
-            ))}
-          </select>
-          <label htmlFor="max-priority" className="mx-2">
-            Max Priority
-          </label>
-          <select
-            id="max-priority"
-            defaultValue={$(filter$)!.maxPriority}
-            onChange={({ target }) => filterTodos.execute({ maxPriority: parseInt(target.value) })}
-          >
-            {repeat(6).map((i) => (
-              <option key={i} value={i}>
-                {i}
-              </option>
-            ))}
-          </select>
+          <Filter values={$(filter$)!} onChange={(values) => filterTodos.execute(values)} />
         </MDBCol>
       </MDBRow>
       <MDBListGroup>

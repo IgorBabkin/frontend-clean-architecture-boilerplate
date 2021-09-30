@@ -6,7 +6,8 @@ export { createLocatorBuilder } from './locator';
 
 export { ILoggerKey, ILogger } from './domain/ILogger';
 export { ITodoRepositoryKey, ITodoRepository } from './domain/todo/ITodoRepository';
-export { ITodo } from './domain/todo/ITodo';
+export { ITodo, ITodoState } from './domain/todo/ITodo';
+export { Todo } from './domain/todo/Todo';
 export { TodoStore } from './domain/todo/TodoStore';
 export { ITodoStore, ITodoStoreKey } from './domain/todo/ITodoStore';
 

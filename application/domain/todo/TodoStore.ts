@@ -3,34 +3,25 @@ import { ITodo } from './ITodo';
 import { IFilterParams, ITodoStore } from './ITodoStore';
 import { ObservableStore } from 'reactivex-store';
 
-export interface IFilterPriorityParams {
-  minPriority: number;
-  maxPriority: number;
-}
-
-const hasValidPriority =
-  ({ minPriority, maxPriority }: IFilterPriorityParams) =>
-  (todo: ITodo): boolean => {
-    return minPriority <= todo.priority && todo.priority <= maxPriority;
-  };
-
-const isTodoValid =
-  (params: IFilterParams) =>
-  (todo: ITodo): boolean => {
-    return hasValidPriority(params)(todo);
-  };
-
-function filterList(list: ITodo[], filter: IFilterParams): ITodo[] {
-  return list.filter(isTodoValid(filter));
-}
-
 export class TodoStore implements ITodoStore {
   private all$ = new ObservableStore<ITodo[]>([]);
-  private filterParams$ = new ObservableStore<IFilterParams>({ minPriority: 0, maxPriority: 5 });
+  private filterParams$ = new ObservableStore<IFilterParams>({
+    search: '',
+    minPriority: 0,
+    maxPriority: 5,
+    caseSensitive: false,
+  });
 
   getItems(): Observable<ITodo[]> {
     return combineLatest([this.all$.toObservable(), this.filterParams$.toObservable()]).pipe(
-      map(([all, params]) => filterList(all, params)),
+      map(([all, params]) =>
+        all.filter((todo) => {
+          return (
+            todo.hasPriorityBetween([params.minPriority, params.maxPriority]) &&
+            todo.hasText(params.search, { caseSensitive: params.caseSensitive })
+          );
+        }),
+      ),
     );
   }
 

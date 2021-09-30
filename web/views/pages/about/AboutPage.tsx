@@ -12,7 +12,7 @@ export const AboutPage: FunctionComponent = () => {
   return (
     <div>
       <a href="#">Home</a>
-      sssdff
+      <p>About us page</p>
     </div>
   );
 };
