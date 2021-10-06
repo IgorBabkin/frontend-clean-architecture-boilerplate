@@ -1,5 +1,6 @@
-import { InjectionToken, Locator } from 'react-ts-ioc-container';
-import { IScopeContextKey, IServiceLocator, ProviderBuilder, ScopeContext } from 'ts-ioc-container';
+import { InjectionToken, Locator, ProviderKey } from 'react-ts-ioc-container';
+import { IServiceLocator, ProviderBuilder } from 'ts-ioc-container';
+import { IScopeContextKey } from './IScopeContextKey';
 
 export class LocatorAdapter implements Locator {
   constructor(private locator: IServiceLocator) {}
@@ -7,7 +8,7 @@ export class LocatorAdapter implements Locator {
   createScope<T>(context?: T): Locator {
     const scope = this.locator.createLocator();
     if (context) {
-      scope.register(IScopeContextKey, ProviderBuilder.fromInstance(new ScopeContext(context)).asRequested());
+      scope.register(IScopeContextKey, ProviderBuilder.fromInstance(context).build());
     }
     return new LocatorAdapter(scope);
   }
@@ -18,5 +19,10 @@ export class LocatorAdapter implements Locator {
 
   resolve<T>(key: InjectionToken<T>, ...deps: unknown[]): T {
     return this.locator.resolve(key, ...deps);
+  }
+
+  register<T>(token: ProviderKey, value: T): this {
+    this.locator.register(token, ProviderBuilder.fromInstance(value).build());
+    return this;
   }
 }

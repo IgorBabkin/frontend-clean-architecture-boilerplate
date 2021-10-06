@@ -12,8 +12,8 @@ import { StubTodoRepository } from '../../infrastructure/StubTodoRepository';
 
 export function devEnv(l: IServiceLocator): IServiceLocator {
   return l
-    .register(ILoggerKey, ProviderBuilder.fromConstructor(ConsoleLogger).asScoped())
-    .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).asSingleton())
-    .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(StubTodoRepository).asSingleton())
-    .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).asSingleton());
+    .register(ILoggerKey, ProviderBuilder.fromConstructor(ConsoleLogger).asSingleton().forLevel(1).build())
+    .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).asSingleton().forLevel(0).build())
+    .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(StubTodoRepository).asSingleton().forLevel(0).build())
+    .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).asSingleton().forLevel(0).build());
 }

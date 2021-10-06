@@ -1,18 +1,22 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { ILogger, ILoggerKey } from '../../../../application';
-import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
-import { useDependency } from 'react-ts-ioc-container';
+import { Scope, useDependency } from 'react-ts-ioc-container';
+import { MyForm } from './MyForm';
+import { IScopeContextKey } from '../../../core/react-ts-ioc-container/IScopeContextKey';
 
 export const AboutPage: FunctionComponent = () => {
   const logger = useDependency<ILogger>(ILoggerKey);
-  const context = useDependency<IScopeContext<string>>(IScopeContextKey);
+  const context = useDependency<string>(IScopeContextKey);
   useEffect(() => {
-    logger.log(context.getValue());
+    logger.log(context);
   });
   return (
     <div>
       <a href="#">Home</a>
-      <p>About us page</p>
+      <h1>About us page</h1>
+      <Scope>
+        <MyForm />
+      </Scope>
     </div>
   );
 };

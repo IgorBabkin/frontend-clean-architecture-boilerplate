@@ -1,14 +1,14 @@
 import React, { FunctionComponent, useEffect } from 'react';
 import { TodoList } from './TodoList';
 import { ILogger, ILoggerKey } from '../../../../application';
-import { IScopeContext, IScopeContextKey } from 'ts-ioc-container';
 import { useDependency } from 'react-ts-ioc-container';
+import { IScopeContextKey } from '../../../core/react-ts-ioc-container/IScopeContextKey';
 
 export const HomePage: FunctionComponent = () => {
   const logger = useDependency<ILogger>(ILoggerKey);
-  const context = useDependency<IScopeContext<string>>(IScopeContextKey);
+  const context = useDependency<string>(IScopeContextKey);
   useEffect(() => {
-    logger.log(context.getValue());
+    logger.log(context);
   });
   return (
     <div>

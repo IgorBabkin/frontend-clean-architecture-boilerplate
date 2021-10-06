@@ -3,8 +3,8 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LoadTodoList, TodoNotificationSaga } from '../../application';
 import { HomePage } from './pages/home/HomePage';
 import { AboutPage } from './pages/about/AboutPage';
-import { Scope } from 'react-ts-ioc-container';
 import { useCommand, useSaga } from '../core/react-clean-use-case/useCases';
+import { Scope } from '../core/react-ts-ioc-container/scope';
 
 export const Application: FunctionComponent = () => {
   console.log('render application');
