@@ -21,5 +21,5 @@ export function createLocator(): IServiceLocator {
       }
     },
   };
-  return new ServiceLocator(new HookedInjector(new IocInjector(injectMetadataCollector), hook));
+  return ServiceLocator.root(new HookedInjector(new IocInjector(injectMetadataCollector), hook));
 }

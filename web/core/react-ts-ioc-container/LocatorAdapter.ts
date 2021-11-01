@@ -6,7 +6,7 @@ export class LocatorAdapter implements Locator {
   constructor(private locator: IServiceLocator) {}
 
   createScope<T>(context?: T): Locator {
-    const scope = this.locator.createLocator();
+    const scope = this.locator.createScope();
     if (context) {
       scope.register(IScopeContextKey, ProviderBuilder.fromInstance(context).asRequested());
     }

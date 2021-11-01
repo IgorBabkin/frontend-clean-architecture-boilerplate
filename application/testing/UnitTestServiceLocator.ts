@@ -20,7 +20,7 @@ export class UnitTestServiceLocator implements IServiceLocator {
     this.mockedStorage = new MoqProviderStorage(createMock);
     this.locator = new ServiceLocator(
       new IocInjector(injectMetadataCollector),
-      new MockedRepository(new ProviderRepository(), this.mockedStorage),
+      new MockedRepository(ProviderRepository.root(), this.mockedStorage),
     );
   }
 
@@ -28,8 +28,8 @@ export class UnitTestServiceLocator implements IServiceLocator {
     return this.mockedStorage.findOrCreate<T>(key).mock;
   }
 
-  createLocator(): IServiceLocator {
-    return this.locator.createLocator();
+  createScope(): IServiceLocator {
+    return this.locator.createScope();
   }
 
   dispose(): void {

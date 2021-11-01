@@ -5356,10 +5356,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-use-case@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.1.2.tgz#e4d771a9f994fb60e6660c3859fdfc6ad23d79e4"
-  integrity sha512-+O0Lqa9kAntl508I7nrR3lFIF41UipwwQzg7clmF5RATJC6BdJ/8xQdEvjNTxMHiQpN2wplgX5BjOq76PAlQMg==
+react-clean-use-case@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.1.4.tgz#bdeb2b2a22621827675948ad12a720108c681bf2"
+  integrity sha512-F5/CR0vPJWg/2KWPWKWWllGzI//WxkWRg9KSl2KQFWnDKcEPIB9kBxHinqp2TCiCCisrBgRlN8E1rioJIqzk0g==
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -5422,10 +5422,10 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-ts-ioc-container@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.1.2.tgz#4fc780a2f012337cb414bdca18ad0b86468c4013"
-  integrity sha512-V/aXsUGPLUp+zStQR4pxZpss59hBEbW908pOtxH0+dekQn1/WKSb7L8otiIubQl60Y3gc1zXEzLg7ZwReTd+Kg==
+react-ts-ioc-container@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.1.4.tgz#d9509c77e3e94ed97ff7fcf12402d43da4ca9a82"
+  integrity sha512-lTv5+rjfin98AI7LDrJav9gN5hziCn0C4fz9mXZtV2quGyXDJoWyERpEQhpEHNU442B/sWTCW6gwXuZs9SBV4w==
 
 react@^17.0.2:
   version "17.0.2"
@@ -6415,10 +6415,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-ioc-container@^7.1.2:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-7.1.2.tgz#bff14e4821d9b0b7169fe1a2e5a730517c69d203"
-  integrity sha512-HpCgRbB+rDpXzS64LmnzkdrASFP1iKpEYEc73lsfJqUkNRm7SWmuCv3KJFcag90gum+M7nX2xNOMKfDBzMBq+g==
+ts-ioc-container@^7.1.4:
+  version "7.1.4"
+  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-7.1.4.tgz#3286ca9c5fa3db4e7fa5e633b6e42ab332194f2a"
+  integrity sha512-hPX0optQ0oeSmwsvk7GQU1Jcmj4lVBBv0lAGnoWGc3mC7aki2pJUvdxYyRLKtHnumAx//Vkygmg+MqyCtOOBFw==
 
 ts-jest@^27.0.5:
   version "27.0.5"
