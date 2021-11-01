@@ -1,4 +1,4 @@
-import { ILocatorBuilder, IocLocatorBuilder } from 'ts-ioc-container';
+import { HookedInjector, IInstanceHook, IocInjector, IServiceLocator, ServiceLocator } from 'ts-ioc-container';
 import {
   injectMetadataCollector,
   onConstructMethodsMetadataCollector,
@@ -6,8 +6,8 @@ import {
 } from './metadata';
 import { isDisposable, isInitializable } from 'clean-use-case';
 
-export function createLocatorBuilder(): ILocatorBuilder {
-  return new IocLocatorBuilder(injectMetadataCollector).withInjectorHook({
+export function createLocator(): IServiceLocator {
+  const hook: IInstanceHook = {
     onConstruct<GInstance>(instance: GInstance) {
       onConstructMethodsMetadataCollector.invokeHooksOf(instance);
       if (isInitializable(instance)) {
@@ -20,5 +20,6 @@ export function createLocatorBuilder(): ILocatorBuilder {
         instance.dispose();
       }
     },
-  });
+  };
+  return new ServiceLocator(new HookedInjector(new IocInjector(injectMetadataCollector), hook));
 }

@@ -1,5 +1,5 @@
 import { IServiceLocator } from 'ts-ioc-container';
-import { createLocatorBuilder } from '../application';
+import { createLocator as createApplicationLocator } from '../application';
 import { prodEnv } from './env/prodEnv';
 import { devEnv } from './env/devEnv';
 import { ArgumentOutOfRangeError } from '../core/errors/ArgumentOutOfRangeError';
@@ -7,15 +7,15 @@ import { ArgumentOutOfRangeError } from '../core/errors/ArgumentOutOfRangeError'
 export type EnvType = 'development' | 'production';
 
 export function createLocator(env: EnvType): IServiceLocator {
-  let locator: IServiceLocator = createLocatorBuilder().build();
+  let locator: IServiceLocator = createApplicationLocator();
 
   switch (env) {
     case 'development':
-      locator = prodEnv(locator);
+      locator = devEnv(locator);
       break;
 
     case 'production':
-      locator = devEnv(locator);
+      locator = prodEnv(locator);
       break;
 
     default:

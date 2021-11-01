@@ -1,4 +1,4 @@
-export { createLocatorBuilder } from './locator';
+export { createLocator } from './locator';
 
 /**
  * domain

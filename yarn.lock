@@ -5356,10 +5356,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-use-case@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.0.22.tgz#78e4c83e49940ddf96e5245402cd4aa8b8dacac4"
-  integrity sha512-/6xzqiwHL1nGN2WG3gp0YUJRLFOrPLNMzcWhpUjHlFSS4xkCyUlWohIIVgXd4RrNazZzVy1PHtw0mNDU2WpWVA==
+react-clean-use-case@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.1.2.tgz#e4d771a9f994fb60e6660c3859fdfc6ad23d79e4"
+  integrity sha512-+O0Lqa9kAntl508I7nrR3lFIF41UipwwQzg7clmF5RATJC6BdJ/8xQdEvjNTxMHiQpN2wplgX5BjOq76PAlQMg==
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -5422,10 +5422,10 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-ts-ioc-container@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.0.9.tgz#185eda9227f37a96db29b660315c8b7b9eb66616"
-  integrity sha512-f0PufdL1w574YWZlEG1HbT1Og4pm8cRqgpxobiSdKxyH+eCD6cAml97xajGl0xW29sMj7tp1Wj+LH43KWnQ1xQ==
+react-ts-ioc-container@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.1.2.tgz#4fc780a2f012337cb414bdca18ad0b86468c4013"
+  integrity sha512-V/aXsUGPLUp+zStQR4pxZpss59hBEbW908pOtxH0+dekQn1/WKSb7L8otiIubQl60Y3gc1zXEzLg7ZwReTd+Kg==
 
 react@^17.0.2:
   version "17.0.2"
@@ -5435,10 +5435,10 @@ react@^17.0.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-reactivex-react@^4.1.16:
-  version "4.1.16"
-  resolved "https://registry.yarnpkg.com/reactivex-react/-/reactivex-react-4.1.16.tgz#218ffc3852477a34f87d89e5f22fbad42f0d575c"
-  integrity sha512-XVQ44LoxCgO56BuuY4o7b/wDi/HhTNYOifp1xFG1zlpbAVJHuOTxX5keZDK+qA866CfxdHo4ATsNBllxW/5OnA==
+reactivex-react@^4.1.17:
+  version "4.1.17"
+  resolved "https://registry.yarnpkg.com/reactivex-react/-/reactivex-react-4.1.17.tgz#219730303663166ec2b65470e6f783c4645effc2"
+  integrity sha512-MBMeFDJWICZlMZNR57Y/swigJnZvycIecBgm+JFt4tkdm32rtOmROhk7qHxntFeRT9zYn/MLNQqhB/lhg3EVqg==
 
 reactivex-store@^1.0.10:
   version "1.0.10"
@@ -6415,10 +6415,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-ioc-container@^7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-7.0.4.tgz#db8879e4c73e576d419e822900fe373823a34360"
-  integrity sha512-8Xbog8w2yqAh4v5b765g+AkJ21LHBvTTUvpK3VApN55I+Q8UDnUue9zDkBdUuxWBCyED1cpPGKgq7C+3Skj7xw==
+ts-ioc-container@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-7.1.2.tgz#bff14e4821d9b0b7169fe1a2e5a730517c69d203"
+  integrity sha512-HpCgRbB+rDpXzS64LmnzkdrASFP1iKpEYEc73lsfJqUkNRm7SWmuCv3KJFcag90gum+M7nX2xNOMKfDBzMBq+g==
 
 ts-jest@^27.0.5:
   version "27.0.5"
