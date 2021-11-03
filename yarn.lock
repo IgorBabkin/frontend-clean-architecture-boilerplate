@@ -273,9 +273,9 @@
     "@babel/helper-plugin-utils" "^7.14.5"
 
 "@babel/runtime@^7.1.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13":
-  version "7.15.4"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
-  integrity sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw==
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.0.tgz#e27b977f2e2088ba24748bf99b5e1dece64e4f0b"
+  integrity sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -5356,10 +5356,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-react-clean-use-case@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.1.4.tgz#bdeb2b2a22621827675948ad12a720108c681bf2"
-  integrity sha512-F5/CR0vPJWg/2KWPWKWWllGzI//WxkWRg9KSl2KQFWnDKcEPIB9kBxHinqp2TCiCCisrBgRlN8E1rioJIqzk0g==
+react-clean-use-case@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/react-clean-use-case/-/react-clean-use-case-1.1.8.tgz#3cfad913602e44ff507fc647e5c40349e6dd6b8d"
+  integrity sha512-5gkAtyseyjyU6GH9i6FdiSq6Wbhu9JplOeaxr4cb8ahJHXDIriWwTYY1hLyk7GQMfOhcZDbTaC45ZDPBTBXGvA==
 
 react-dom@^17.0.2:
   version "17.0.2"
@@ -5422,10 +5422,10 @@ react-router@5.2.1:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-ts-ioc-container@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.1.4.tgz#d9509c77e3e94ed97ff7fcf12402d43da4ca9a82"
-  integrity sha512-lTv5+rjfin98AI7LDrJav9gN5hziCn0C4fz9mXZtV2quGyXDJoWyERpEQhpEHNU442B/sWTCW6gwXuZs9SBV4w==
+react-ts-ioc-container@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/react-ts-ioc-container/-/react-ts-ioc-container-1.1.8.tgz#1844556d7f3087e24cc7e2aa44e7c15509bae74c"
+  integrity sha512-UDlPCTRqjIG+631pRj1ao5eoChIja2RafgYdLuSZSygtFNaXp1nKPDAt0HWra0VpZoO91wPKyqDtc1/AYrTk+w==
 
 react@^17.0.2:
   version "17.0.2"
@@ -6343,9 +6343,9 @@ thunky@^1.0.2:
   integrity sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA==
 
 tiny-invariant@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
-  integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.2.0.tgz#a1141f86b672a9148c72e978a19a73b9b94a15a9"
+  integrity sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==
 
 tiny-warning@^1.0.0, tiny-warning@^1.0.3:
   version "1.0.3"
@@ -6415,10 +6415,10 @@ trim-newlines@^3.0.0:
   dependencies:
     glob "^7.1.2"
 
-ts-ioc-container@^7.1.4:
-  version "7.1.4"
-  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-7.1.4.tgz#3286ca9c5fa3db4e7fa5e633b6e42ab332194f2a"
-  integrity sha512-hPX0optQ0oeSmwsvk7GQU1Jcmj4lVBBv0lAGnoWGc3mC7aki2pJUvdxYyRLKtHnumAx//Vkygmg+MqyCtOOBFw==
+ts-ioc-container@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/ts-ioc-container/-/ts-ioc-container-8.0.1.tgz#42a723369780fef2b3acf80f4204fced41aee71e"
+  integrity sha512-TNGEA3VkhUr1HJ8vLVj5ohAgjcaNrJQ4dQjXHdk0lWiPXLSUsRO+7JWS/wEO7R9FaG9VuXRVqGQAUs+bUSHD5g==
 
 ts-jest@^27.0.5:
   version "27.0.5"

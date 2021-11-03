@@ -11,9 +11,10 @@ import { ConsoleLogger } from '../../infrastructure/ConsoleLogger';
 import { StubTodoRepository } from '../../infrastructure/StubTodoRepository';
 
 export function prodEnv(l: IServiceLocator): IServiceLocator {
-  return l
-    .register(ILoggerKey, ProviderBuilder.fromConstructor(ConsoleLogger).forLevel(1).asSingleton())
-    .register(IAddTodoActionKey, ProviderBuilder.fromConstructor(AddTodo).forLevel(0).asSingleton())
-    .register(ITodoRepositoryKey, ProviderBuilder.fromConstructor(StubTodoRepository).forLevel(0).asSingleton())
-    .register(ITodoStoreKey, ProviderBuilder.fromConstructor(TodoStore).forLevel(0).asSingleton());
+  return l.register({
+    [ILoggerKey]: ProviderBuilder.fromConstructor(ConsoleLogger).forLevel(1).asSingleton(),
+    [IAddTodoActionKey]: ProviderBuilder.fromConstructor(AddTodo).forLevel(0).asSingleton(),
+    [ITodoRepositoryKey]: ProviderBuilder.fromConstructor(StubTodoRepository).forLevel(0).asSingleton(),
+    [ITodoStoreKey]: ProviderBuilder.fromConstructor(TodoStore).forLevel(0).asSingleton(),
+  });
 }
