@@ -1,9 +1,10 @@
 import {
   constructor,
   createArgsFnDecorator,
-  createHookDecorator,
   createInjectDecorator,
   createLevelDecorator,
+  createMethodHookDecorator,
+  createProviderHookDecorator,
   createSingletonDecorator,
   createTagsDecorator,
   ProviderBuilder,
@@ -18,9 +19,10 @@ import { createAddKeysDecorator } from 'ts-ioc-container/cjm/features/scope/deco
 
 export const inject = createInjectDecorator(injectMetadataCollector);
 
-export const onConstruct = createHookDecorator(onConstructMethodsMetadataCollector);
-export const onDispose = createHookDecorator(onDisposeMethodsMetadataCollector);
+export const onConstruct = createMethodHookDecorator(onConstructMethodsMetadataCollector);
+export const onDispose = createMethodHookDecorator(onDisposeMethodsMetadataCollector);
 
+export const hook = createProviderHookDecorator(providersMetadataCollector);
 export const argsFn = createArgsFnDecorator(providersMetadataCollector);
 export const keys = createAddKeysDecorator(providersMetadataCollector);
 export const singleton = createSingletonDecorator(providersMetadataCollector);
