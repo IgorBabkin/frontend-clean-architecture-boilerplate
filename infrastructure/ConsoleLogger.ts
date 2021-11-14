@@ -1,5 +1,8 @@
 import { IDisposable, ILogger } from '../application';
+import { level, singleton } from '../application/decorators';
 
+@singleton
+@level(1)
 export class ConsoleLogger implements ILogger, IDisposable {
   constructor(private prefix: string) {}
 

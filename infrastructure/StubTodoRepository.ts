@@ -1,5 +1,8 @@
 import { ITodo, ITodoRepository, Todo } from '../application';
+import { level, singleton } from '../application/decorators';
 
+@singleton
+@level(0)
 export class StubTodoRepository implements ITodoRepository {
   fetchAll(): Promise<ITodo[]> {
     return Promise.resolve([

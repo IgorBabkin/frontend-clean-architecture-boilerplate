@@ -2,7 +2,10 @@ import { combineLatest, map, Observable } from 'rxjs';
 import { ITodo } from './ITodo';
 import { IFilterParams, ITodoStore } from './ITodoStore';
 import { ObservableStore } from 'reactivex-store';
+import { level, singleton } from '../../decorators';
 
+@singleton
+@level(0)
 export class TodoStore implements ITodoStore {
   private all$ = new ObservableStore<ITodo[]>([]);
   private filterParams$ = new ObservableStore<IFilterParams>({

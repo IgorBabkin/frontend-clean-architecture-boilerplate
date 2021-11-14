@@ -36,8 +36,8 @@ export class UnitTestServiceLocator implements IServiceLocator {
     this.locator.dispose();
   }
 
-  register(dictionary: Record<ProviderKey, IProvider<unknown>>): this {
-    this.locator.register(dictionary);
+  register(key: ProviderKey, provider: IProvider<unknown>): this {
+    this.locator.register(key, provider);
     return this;
   }
 

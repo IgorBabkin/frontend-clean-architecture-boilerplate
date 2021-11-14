@@ -6,15 +6,15 @@ import {
   ITodoStoreKey,
   TodoStore,
 } from '../../application';
-import { IServiceLocator, ProviderBuilder } from 'ts-ioc-container';
+import { IServiceLocator } from 'ts-ioc-container';
 import { ConsoleLogger } from '../../infrastructure/ConsoleLogger';
 import { StubTodoRepository } from '../../infrastructure/StubTodoRepository';
+import { fromClass } from '../../application/decorators';
 
 export function prodEnv(l: IServiceLocator): IServiceLocator {
-  return l.register({
-    [ILoggerKey]: ProviderBuilder.fromConstructor(ConsoleLogger).forLevel(1).asSingleton(),
-    [IAddTodoActionKey]: ProviderBuilder.fromConstructor(AddTodo).forLevel(0).asSingleton(),
-    [ITodoRepositoryKey]: ProviderBuilder.fromConstructor(StubTodoRepository).forLevel(0).asSingleton(),
-    [ITodoStoreKey]: ProviderBuilder.fromConstructor(TodoStore).forLevel(0).asSingleton(),
-  });
+  return l
+    .register(ILoggerKey, fromClass(ConsoleLogger).build())
+    .register(IAddTodoActionKey, fromClass(AddTodo).build())
+    .register(ITodoRepositoryKey, fromClass(StubTodoRepository).build())
+    .register(ITodoStoreKey, fromClass(TodoStore).build());
 }

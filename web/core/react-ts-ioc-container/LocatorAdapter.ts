@@ -8,7 +8,7 @@ export class LocatorAdapter implements Locator {
   createScope<T>(context?: T): Locator {
     const scope = this.locator.createScope();
     if (context) {
-      scope.register({ [IScopeContextKey]: ProviderBuilder.fromInstance(context).asRequested() });
+      scope.register(IScopeContextKey, ProviderBuilder.fromValue(context).build());
     }
     return new LocatorAdapter(scope);
   }
@@ -21,8 +21,8 @@ export class LocatorAdapter implements Locator {
     return this.locator.resolve(key, ...deps);
   }
 
-  register<T>(token: ProviderKey, value: T): this {
-    this.locator.register({ token: ProviderBuilder.fromInstance(value).asRequested() });
+  register<T>(key: ProviderKey, value: T): this {
+    this.locator.register(key, ProviderBuilder.fromValue(value).build());
     return this;
   }
 }
