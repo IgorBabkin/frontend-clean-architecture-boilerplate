@@ -1,6 +1,7 @@
-import { ITodo, ITodoRepository, Todo } from '../application';
-import { level, singleton } from '../application/decorators';
+import { ITodo, ITodoRepository, ITodoRepositoryKey, Todo } from '../application';
+import { keys, level, singleton } from '../application/decorators';
 
+@keys(ITodoRepositoryKey)
 @singleton
 @level(0)
 export class StubTodoRepository implements ITodoRepository {

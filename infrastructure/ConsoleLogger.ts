@@ -1,6 +1,8 @@
-import { IDisposable, ILogger } from '../application';
-import { level, singleton } from '../application/decorators';
+import { IDisposable, ILogger, ILoggerKey } from '../application';
+import { argsFn, keys, level, singleton } from '../application/decorators';
 
+@keys(ILoggerKey)
+@argsFn(() => ['root'])
 @singleton
 @level(1)
 export class ConsoleLogger implements ILogger, IDisposable {

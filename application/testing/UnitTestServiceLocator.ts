@@ -1,7 +1,7 @@
 import {
+  IKeyedProvider,
   InjectionToken,
   IocInjector,
-  IProvider,
   IServiceLocator,
   MockedRepository,
   ProviderKey,
@@ -36,8 +36,8 @@ export class UnitTestServiceLocator implements IServiceLocator {
     this.locator.dispose();
   }
 
-  register(key: ProviderKey, provider: IProvider<unknown>): this {
-    this.locator.register(key, provider);
+  register(provider: IKeyedProvider<unknown>): this {
+    this.locator.register(provider);
     return this;
   }
 

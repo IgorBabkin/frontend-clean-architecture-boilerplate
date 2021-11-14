@@ -1,4 +1,4 @@
-import { inject, level, singleton } from '../../decorators';
+import { inject, keys, level, singleton } from '../../decorators';
 import { ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
 import { ITodoState } from '../../domain/todo/ITodo';
 import { Action, IAction } from 'clean-use-case';
@@ -8,6 +8,7 @@ import { Todo } from '../../domain/todo/Todo';
 export const IAddTodoActionKey = Symbol.for('IAddTodoAction');
 export interface IAddTodo extends IAction<ITodoState> {}
 
+@keys(IAddTodoActionKey)
 @singleton
 @level(0)
 export class AddTodo extends Action<ITodoState> implements IAddTodo {
