@@ -4,7 +4,7 @@ import { argsFn, keys, level, singleton } from '../application/decorators';
 @keys(ILoggerKey)
 @argsFn(() => ['root'])
 @singleton
-@level(1)
+@level(0)
 export class ConsoleLogger implements ILogger, IDisposable {
   constructor(private prefix: string) {}
 

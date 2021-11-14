@@ -22,13 +22,13 @@ export const Application: FunctionComponent = () => {
           exact
           path="/"
           render={() => (
-            <Scope context="Hello everyone">
+            <Scope context="Hello everyone" tags={['home']}>
               <HomePage />
             </Scope>
           )}
         />
         <Route path="/about">
-          <Scope context="about us smth">
+          <Scope context="about us smth" tags={['about']}>
             <AboutPage />
           </Scope>
         </Route>

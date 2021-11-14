@@ -1,4 +1,5 @@
 import {
+  constructor,
   IKeyedProvider,
   InjectionToken,
   IocInjector,
@@ -43,5 +44,9 @@ export class UnitTestServiceLocator implements IServiceLocator {
 
   resolve<T>(key: InjectionToken<T>, ...deps: any[]): T {
     return this.locator.resolve(key, ...deps);
+  }
+
+  resolveClass<T>(key: constructor<T>, ...deps: any[]): T {
+    return this.locator.resolveClass(key, ...deps);
   }
 }

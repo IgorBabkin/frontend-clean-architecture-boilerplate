@@ -1,4 +1,4 @@
-import { HookedInjector, IInstanceHook, IocInjector, IServiceLocator, ServiceLocator } from 'ts-ioc-container';
+import { HookedServiceLocator, IInstanceHook, IocInjector, IServiceLocator, ServiceLocator } from 'ts-ioc-container';
 import {
   injectMetadataCollector,
   onConstructMethodsMetadataCollector,
@@ -21,5 +21,5 @@ export function createLocator(): IServiceLocator {
       }
     },
   };
-  return ServiceLocator.root(new HookedInjector(new IocInjector(injectMetadataCollector), hook));
+  return new HookedServiceLocator(ServiceLocator.root(new IocInjector(injectMetadataCollector)), hook);
 }

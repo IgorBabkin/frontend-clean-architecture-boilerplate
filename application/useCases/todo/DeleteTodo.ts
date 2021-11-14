@@ -1,5 +1,5 @@
 import { ICommand } from 'clean-use-case';
-import { inject } from '../../decorators';
+import { inject, onDispose } from '../../decorators';
 import { ITodoStore, ITodoStoreKey } from '../../domain/todo/ITodoStore';
 import { ITodoRepository, ITodoRepositoryKey } from '../../domain/todo/ITodoRepository';
 
@@ -12,5 +12,10 @@ export class DeleteTodo implements ICommand {
   async execute(id: string): Promise<void> {
     await this.todoRepository.delete(id);
     this.todoStore.deleteTodo(id);
+  }
+
+  @onDispose
+  sayBye() {
+    console.log('good bye');
   }
 }
