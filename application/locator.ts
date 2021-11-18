@@ -1,25 +1,6 @@
-import { HookedServiceLocator, IInstanceHook, IocInjector, IServiceLocator, ServiceLocator } from 'ts-ioc-container';
-import {
-  injectMetadataCollector,
-  onConstructMethodsMetadataCollector,
-  onDisposeMethodsMetadataCollector,
-} from './metadata';
-import { isDisposable, isInitializable } from 'clean-use-case';
+import { ContainerBuilder, IContainer, IocInjector } from 'ts-ioc-container';
+import { injectMetadataCollector, instanceHook } from './decorators';
 
-export function createLocator(): IServiceLocator {
-  const hook: IInstanceHook = {
-    onConstruct<GInstance>(instance: GInstance) {
-      onConstructMethodsMetadataCollector.invokeHooksOf(instance);
-      if (isInitializable(instance)) {
-        instance.initialize();
-      }
-    },
-    onDispose<GInstance>(instance: GInstance) {
-      onDisposeMethodsMetadataCollector.invokeHooksOf(instance);
-      if (isDisposable(instance)) {
-        instance.dispose();
-      }
-    },
-  };
-  return new HookedServiceLocator(ServiceLocator.root(new IocInjector(injectMetadataCollector)), hook);
+export function createLocator(): IContainer {
+  return new ContainerBuilder(new IocInjector(injectMetadataCollector)).setHook(instanceHook).build();
 }

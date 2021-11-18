@@ -1,15 +1,14 @@
 import { TodoStore } from './TodoStore';
-import { IServiceLocator } from 'ts-ioc-container';
 import { ITodo } from './ITodo';
 import { firstValueFrom } from 'rxjs';
-import { UnitTestServiceLocator } from '../../testing/UnitTestServiceLocator';
-import { createLooseMock } from '../../testing/createMock';
+import { UnitTestContainer } from '../../testing/UnitTestContainer';
+import { createMock } from '../../testing/createMock';
 
 describe('TodoStore', function () {
-  let locator: IServiceLocator;
+  let locator: UnitTestContainer;
 
   beforeEach(() => {
-    locator = new UnitTestServiceLocator(createLooseMock);
+    locator = new UnitTestContainer(createMock);
   });
 
   it('filters todos', async () => {
